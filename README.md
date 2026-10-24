@@ -1,4 +1,4 @@
-# Mir176
+# github.com/suneveryday/Mir176
 
 **面向 Windows PC 的《热血传奇》1.76 还原工程：Docker 服务端与独立登录器。**
 
