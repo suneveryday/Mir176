@@ -83,12 +83,12 @@
     "deployment/deploy.py": "ce2f941d8beee637eef34dff8c3901803ab68ec500a46cc77b1504088819688f",
     "deployment/deploy.sh": "dc5be648d75665e65be040e85b22216620abdc42f8c7922a68040eefcc411a68",
     "deployment/.dockerignore": "30c13ace3a90d6513aab96f11a8eed4d19d2e457c692d9292ad0aa533caed216",
-    "distribution.json": "cfeabd3dd176ed44cdb860ab5023feaf62b55ab0c5557d395c6367df9280423c",
+    "distribution.json": "da900fa5957dd8e5d4ae5e751eb5f0a843b4073c0b40856a8b40a146be67a246",
     "tools/check-ecosystem.py": "bfb7138aca0cb52caf9a501cef49600d39d684da5c6f3fd89bec3b07a7a13125",
-    "ecosystem.lock.json": "34fa49688a8a0565a9eedb502ab00bee3f5e85b75a27e294539df4aeed73654a",
+    "ecosystem.lock.json": "4b75bdb0a01a5b86d8b829ac9ccc9df57712d2f92fc352e01154197ca704142f",
     "tools/check-repository-boundary.py": "cdae1f15601e7ea0eff8f22c64458392294c4188aa4a77c6ad67892cefb8e37a",
     "deployment/import-resources.py": "1f8755205ae1448da19dde3230aa56552ade4559ccd0aa62ca40e28ddebe7517",
     "content/level-experience.json": "1494353f48af5cab6f6fb8c1aec8cab82c1d534d4553ea14e0ab78a12318b156"
   },
-  "review_sha256": "07cc1eac80629fe6492ee25c05a85e4d87a706b144e2bbe16ef50559f26316f2"
+  "review_sha256": "2ff84ccbff8c1f910170edfb3a043ee98343e32c146d72132f7fbd060d49cc92"
 }

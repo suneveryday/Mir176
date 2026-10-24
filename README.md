@@ -62,7 +62,7 @@ launcher/build-on-windows.ps1 -OutputDirectory .build/launcher
 tests/launcher/run-windows.ps1 -OutputDirectory .build/launcher-tests
 ```
 
-当前配套为服务端 **0.1.4**、客户端 **0.1.5**、登录器 **0.1.6**。精确文件、资源集合与散列以 [distribution.json](distribution.json) 为准；构建、完整性校验和实机验收分别处理。
+当前配套为服务端 **0.1.4**、客户端 **0.1.6**、登录器 **0.1.6**。精确文件、资源集合与散列以 [distribution.json](distribution.json) 为准；构建、完整性校验和实机验收分别处理。
 
 ## 文档与许可
 

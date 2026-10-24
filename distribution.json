@@ -21,13 +21,13 @@
     }
   },
   "game_client": {
-    "component_version": "0.1.5",
-    "exe_sha256": "55d89e45b92669840e4072f9b0cabccec923c2a7e35a194f518af10a94775d13",
-    "archive": "Mir176-Client-Program-0.1.5.zip",
+    "component_version": "0.1.6",
+    "exe_sha256": "801c415456a551a1ce55069855a311b2c43e0115fd4652ac7afad4a0f04b0038",
+    "archive": "Mir176-Client-Program-0.1.6.zip",
     "exact_distribution_runtime": "pending_runtime_validation",
     "repository": "https://github.com/suneveryday/Mir176Client",
     "source_path": "client/current-source/",
-    "release": "https://github.com/suneveryday/Mir176Client/releases/tag/v0.1.5"
+    "release": "https://github.com/suneveryday/Mir176Client/releases/tag/v0.1.6"
   },
   "launcher": {
     "component_version": "0.1.6",
@@ -41,7 +41,7 @@
     "files": 1254,
     "bytes": 1829416632,
     "archive": "Mir176-Resources-ca77a19cb580.zip",
-    "channel": "private-github-release",
+    "channel": "github-release",
     "download_url": "https://github.com/suneveryday/Mir176Client/releases/download/v0.1.5/Mir176-Resources-ca77a19cb580.zip",
     "origin": "Locally available recovered static assets; not a certified 2003 client asset set.",
     "license_note": "Recovered game assets are not newly licensed by this repository; obtain permission to redistribute or use them.",

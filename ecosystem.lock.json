@@ -24,8 +24,8 @@
     "Mir176Client": {
       "path": ".dependencies/Mir176Client",
       "repository": "https://github.com/suneveryday/Mir176Client",
-      "version": "0.1.5",
-      "revision": "809171d7c1ac63e6c5cf28124cd7cd66df79501e"
+      "version": "0.1.6",
+      "revision": "c13c0f1808e2802cb5246e8c8880ee9be6379a03"
     }
   },
   "runtime_status": "pending_runtime_validation",
