@@ -11,6 +11,11 @@
 
 项目以 2003 年中国大陆《热血传奇》1.76“重装上阵”的游戏体验为目标。服务端、客户端和资源分别交付，登录器允许使用者填写服务器地址。当前提供还原预览版，部分参数为工程采用值，完整运行组合仍待验证。
 
+<img width="401" height="316" alt="image" src="https://github.com/user-attachments/assets/99e2b8c2-e424-40f4-8121-ca176cfef18d" /><img width="401" height="316" alt="image" src="https://github.com/user-attachments/assets/b59a9b43-f4ab-4531-be0c-204d3df7c1a1" />
+
+
+
+
 ## 选择需要的内容
 
 | 内容 | 源码 / 说明 | 下载位置 |
