@@ -1,0 +1,7 @@
+# Preserve imported source and frozen evidence bytes across platforms.
+* -text
+*.res binary
+*.dres binary
+*.png binary
+*.ico binary
+*.map binary

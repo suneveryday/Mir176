@@ -1,0 +1,65 @@
+name: Source contracts
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  windows-launcher:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build standalone Windows launcher
+        shell: powershell
+        run: launcher/build-on-windows.ps1 -OutputDirectory .build/launcher
+      - name: Endpoint, configuration, controls and isolated process regression
+        shell: powershell
+        run: tests/launcher/run-windows.ps1 -OutputDirectory .build/launcher-tests
+  contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python tools/check-privacy.py --history
+      - run: python tools/check-privacy.py --ref HEAD
+      - run: python tools/check-repository-boundary.py --history
+      - name: Publication identity and private-value regression
+        run: python -m unittest discover -s tests/privacy -v
+      - run: python tools/check-contract.py
+      - name: Release archive and diagnostic redaction guards
+        run: python -m unittest discover -s tests/release-packaging -v
+      - name: New Docker deployment entry guards (no Docker connection)
+        run: python -m unittest discover -s tests/docker-deployment -v
+  server-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - run: bash tools/build-server.sh
+      - name: Gateway account admission regression
+        run: |
+          dotnet build tests/gateway-login/GatewayLogin.csproj -p:ServerBin="$PWD/.build/server/GameGate" -p:NuGetAudit=false -o .build/gateway-login-ci
+          cp .build/server/GameGate/*.dll .build/gateway-login-ci/
+          dotnet .build/gateway-login-ci/GatewayLogin.dll
+      - name: Configurable GM level increase regression
+        run: |
+          dotnet build tests/gm-level/GmLevel.csproj -p:ServerBin="$PWD/.build/server/GameSrv" -p:NuGetAudit=false -o .build/gm-level-ci
+          cp .build/server/GameSrv/*.dll .build/gm-level-ci/
+          dotnet .build/gm-level-ci/GmLevel.dll
+      - name: Actor notification ordering regression
+        run: |
+          dotnet run --project tests/actor-message-order/ActorMessageOrder.csproj -p:ServerBin="$PWD/.build/server/GameSrv" -p:NuGetAudit=false
+      - name: Classic GM identity, catalog and disabled-by-default regression
+        run: |
+          python3 tools/export-classic-gm-policy.py --output .build/gm-ci/classic-policy.json
+          python3 tests/classic-gm/configuration.py
+          dotnet build server/ClassicHost/ClassicHost.csproj -p:NuGetAudit=false -o .build/gm-ci/host
+          dotnet build tests/classic-gm/ClassicGm.csproj -p:ServerBin="$PWD/.build/server/GameSrv" -p:NuGetAudit=false -o .build/gm-ci/tests
+          cp .build/server/GameSrv/*.dll .build/gm-ci/tests/
+          dotnet .build/gm-ci/tests/ClassicGm.dll .build/gm-ci/classic-policy.json "$PWD/.build/gm-ci/host/ClassicHost.dll"

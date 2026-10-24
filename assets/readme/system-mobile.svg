@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="622" viewBox="0 0 600 622" role="img" aria-labelledby="title desc">
+  <title id="title">Mir176 连接结构</title>
+  <desc id="desc">独立登录器启动 Windows 客户端，客户端连接 Docker 服务端。</desc>
+  <rect width="600" height="622" rx="8" fill="#161a1d"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,sans-serif">
+    <text x="38" y="62" fill="#cda766" font-size="26">MIR176 / 连接与部署</text>
+    <text x="38" y="113" fill="#f4efdf" font-size="36" font-weight="600">分开交付，独立连接。</text>
+    <rect x="38" y="155" width="524" height="116" rx="8" fill="#22292c"/>
+    <text x="64" y="203" fill="#f4efdf" font-size="32" font-weight="600">独立登录器</text>
+    <text x="64" y="244" fill="#b6c2be" font-size="27">填写地址 · 启动游戏</text>
+    <path d="M300 285V311M290 301L300 311L310 301" stroke="#cda766" stroke-width="3" fill="none"/>
+    <rect x="38" y="325" width="524" height="116" rx="8" fill="#22292c"/>
+    <text x="64" y="373" fill="#f4efdf" font-size="32" font-weight="600">Windows 客户端</text>
+    <text x="64" y="414" fill="#b6c2be" font-size="27">游戏程序 + 完整资源</text>
+    <path d="M300 455V481M290 471L300 481L310 471" stroke="#cda766" stroke-width="3" fill="none"/>
+    <rect x="38" y="495" width="524" height="91" rx="8" fill="#22292c"/>
+    <text x="64" y="550" fill="#f4efdf" font-size="32" font-weight="600">Docker 服务端</text>
+  </g>
+</svg>

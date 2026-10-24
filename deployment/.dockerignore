@@ -1,0 +1,9 @@
+**
+!Dockerfile
+!.dockerignore
+!host/
+!host/**
+!services/
+!services/**
+!content-manifest.json
+**/*.pdb

@@ -1,0 +1,50 @@
+name: mir2classic176
+services:
+  database:
+    image: mysql:8.0
+    platform: linux/amd64
+    environment:
+      MYSQL_DATABASE: classic_account
+      MYSQL_USER: classic
+      MYSQL_PASSWORD_FILE: /run/secrets/db_password
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/db_root_password
+    secrets: [db_password, db_root_password]
+    volumes:
+      - classic_database:/var/lib/mysql
+      - ./mysql-init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: [CMD, mysqladmin, ping, -h, localhost, --silent]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+    restart: unless-stopped
+  game:
+    image: ${CLASSIC_IMAGE:-mir2classic176:candidate-0.1.4}
+    platform: linux/amd64
+    init: true
+    environment:
+      CLASSIC_PUBLIC_ADDRESS: ${CLASSIC_PUBLIC_ADDRESS:?Run the local setup tool}
+      CLASSIC_SELECT_PORT: ${CLASSIC_SELECT_PORT:?Select an unused port}
+      CLASSIC_GAME_PORT: ${CLASSIC_GAME_PORT:?Select an unused port}
+    ports:
+      - "${CLASSIC_LOGIN_PORT:?Select an unused port}:7000"
+      - "${CLASSIC_SELECT_PORT:?Select an unused port}:7100"
+      - "${CLASSIC_GAME_PORT:?Select an unused port}:7200"
+    secrets: [db_password]
+    volumes: [classic_game:/state]
+    depends_on:
+      database: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, dotnet, /opt/classic/host/ClassicHost.dll, --healthcheck]
+      interval: 15s
+      timeout: 5s
+      start_period: 120s
+      retries: 5
+    stop_grace_period: 180s
+    restart: unless-stopped
+secrets:
+  db_password: {file: ./.secrets/db_password}
+  db_root_password: {file: ./.secrets/db_root_password}
+volumes:
+  classic_database:
+  classic_game:

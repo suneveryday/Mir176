@@ -1,0 +1,12 @@
+#!/bin/sh
+set -eu
+python3 tools/check-privacy.py --history
+while read -r local_ref local_sha remote_ref remote_sha; do
+  case "$local_sha" in
+    0000000000000000000000000000000000000000) continue ;;
+  esac
+  python3 tools/check-privacy.py --ref "$local_sha"
+  python3 tools/check-repository-boundary.py --ref "$local_sha"
+done
+python3 tools/check-contract.py
+python3 tools/check-repository-boundary.py --history

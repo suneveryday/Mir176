@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ServerBin Condition="'$(ServerBin)'==''">$(MSBuildThisFileDirectory)../../.build/repair-20261018/server/GameSrv</ServerBin>
+    <StorageBin Condition="'$(StorageBin)'==''">$(MSBuildThisFileDirectory)../../.build/repair-20261018/server/DBSvr.Storage.MySQL</StorageBin>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="$(ServerBin)/*.dll" />
+    <Reference Include="$(StorageBin)/DBSrv.Storage.MySQL.dll" />
+    <Reference Include="$(StorageBin)/DBSrv.Storage.dll" />
+  </ItemGroup>
+</Project>

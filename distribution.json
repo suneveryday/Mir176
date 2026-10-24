@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "project": "Mir2Classic176",
+  "version": "0.1.9",
+  "status": "pending_runtime_validation",
+  "source_modules": {
+    "server": "server/src/",
+    "server_host": "server/ClassicHost/",
+    "launcher": "launcher/"
+  },
+  "server": {
+    "component_version": "0.1.4",
+    "archive": "Mir176-Server-Docker-0.1.4-Deploy-0.1.9.zip",
+    "map_resources": {
+      "repository": "https://github.com/suneveryday/Mir176Client",
+      "archive": "Mir176-Server-Maps-ca77a19cb580.zip",
+      "sha256": "d914913976041f1e9608f09744f0aeacbbaa53fef21aba19fb24b9ea76dc99c4",
+      "bytes": 7207848,
+      "files": 264,
+      "download_url": "https://github.com/suneveryday/Mir176Client/releases/download/v0.1.5/Mir176-Server-Maps-ca77a19cb580.zip"
+    }
+  },
+  "game_client": {
+    "component_version": "0.1.5",
+    "exe_sha256": "55d89e45b92669840e4072f9b0cabccec923c2a7e35a194f518af10a94775d13",
+    "archive": "Mir176-Client-Program-0.1.5.zip",
+    "exact_distribution_runtime": "pending_runtime_validation",
+    "repository": "https://github.com/suneveryday/Mir176Client",
+    "source_path": "client/current-source/",
+    "release": "https://github.com/suneveryday/Mir176Client/releases/tag/v0.1.5"
+  },
+  "launcher": {
+    "component_version": "0.1.6",
+    "exe_sha256": "b74c44ef9cddbfb5c24f0176d86e52ff6a8c679fba8e62d1782ecb87f83b2fdd",
+    "archive": "Mir176Launcher-0.1.6-Windows.zip"
+  },
+  "resources": {
+    "id": "assets-ca77a19cb580",
+    "index": "https://github.com/suneveryday/Mir176Client/blob/main/resources/manifest.json",
+    "index_sha256": "ca77a19cb58097294a1f36e23a871cc5dead654671d4f7faa93742bdcd409c42",
+    "files": 1254,
+    "bytes": 1829416632,
+    "archive": "Mir176-Resources-ca77a19cb580.zip",
+    "channel": "private-github-release",
+    "download_url": "https://github.com/suneveryday/Mir176Client/releases/download/v0.1.5/Mir176-Resources-ca77a19cb580.zip",
+    "origin": "Locally available recovered static assets; not a certified 2003 client asset set.",
+    "license_note": "Recovered game assets are not newly licensed by this repository; obtain permission to redistribute or use them.",
+    "repository": "https://github.com/suneveryday/Mir176Client"
+  }
+}

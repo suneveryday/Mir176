@@ -1,0 +1,13 @@
+# Explicit opt-in overlay. Provision a private token before using this file.
+services:
+  game:
+    environment:
+      CLASSIC_GM_ENABLED: "true"
+      CLASSIC_GM_TOKEN_FILE: /run/secrets/gm_token
+    ports:
+      - "${CLASSIC_GM_PORT:?Choose an unused GM port}:7210"
+    secrets:
+      - gm_token
+secrets:
+  gm_token:
+    file: ./.secrets/gm_token

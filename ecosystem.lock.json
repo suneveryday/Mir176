@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "management_baseline": "0.1.9",
+  "date": "2026-10-24",
+  "projects": {
+    "Mir2GMTool": {
+      "path": "gm-tool",
+      "repository": "Mir2GMTool",
+      "version": "0.2.0",
+      "revision": "d0be868d0e06a7f2ef6fb9f9437b9bb772f7692c"
+    },
+    "Mir2bot": {
+      "path": "Mir2bot",
+      "repository": "Mir2bot",
+      "version": "0.1.1",
+      "revision": "8aeda95b3ba0bcc3523bf815ad323c5ae60ae516"
+    },
+    "Mir2Classic176": {
+      "path": ".",
+      "repository": "Mir2Classic176",
+      "version": "0.1.9",
+      "revision": "self"
+    },
+    "Mir176Client": {
+      "path": ".dependencies/Mir176Client",
+      "repository": "https://github.com/suneveryday/Mir176Client",
+      "version": "0.1.5",
+      "revision": "809171d7c1ac63e6c5cf28124cd7cd66df79501e"
+    }
+  },
+  "runtime_status": "pending_runtime_validation",
+  "message_aliases": {
+    "SM_LOGINNOTICE": "SM_SENDNOTICE"
+  }
+}

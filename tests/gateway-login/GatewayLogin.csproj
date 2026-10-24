@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><EnableDefaultCompileItems>false</EnableDefaultCompileItems><ServerBin Condition="'$(ServerBin)'==''">../../.build/server/GameGate</ServerBin></PropertyGroup>
+ <ItemGroup><Compile Include="Program.cs"/><Reference Include="GameGate"><HintPath>$(ServerBin)/GameGate.dll</HintPath></Reference><Reference Include="OpenMir2"><HintPath>$(ServerBin)/OpenMir2.dll</HintPath></Reference><Reference Include="Serilog"><HintPath>$(ServerBin)/Serilog.dll</HintPath></Reference></ItemGroup>
+</Project>

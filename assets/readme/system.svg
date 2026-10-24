@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="344" viewBox="0 0 1200 344" role="img" aria-labelledby="title desc">
+  <title id="title">Mir176：从独立登录器到 Docker 服务端</title>
+  <desc id="desc">登录器启动 Windows 客户端，客户端连接服务端。服务端与登录器由 Mir176 维护，客户端与游戏资源由 Mir176Client 提供。</desc>
+  <rect width="1200" height="344" rx="8" fill="#161a1d"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,sans-serif">
+    <text x="54" y="59" fill="#cda766" font-size="20" letter-spacing="3">MIR176 / 连接与部署</text>
+    <text x="54" y="113" fill="#f4efdf" font-size="38" font-weight="650">一个独立世界，分开交付。</text>
+    <path d="M54 140H1146" stroke="#465051"/>
+    <g id="launcher">
+      <rect x="54" y="171" width="306" height="102" rx="8" fill="#22292c"/>
+      <text x="78" y="211" fill="#f4efdf" font-size="28" font-weight="600">独立登录器</text>
+      <text x="78" y="247" fill="#b6c2be" font-size="21">填写地址 · 启动游戏</text>
+    </g>
+    <path d="M377 222H422M412 212L422 222L412 232" stroke="#cda766" stroke-width="2" fill="none"/>
+    <g id="pc-client">
+      <rect x="440" y="171" width="306" height="102" rx="8" fill="#22292c"/>
+      <text x="464" y="211" fill="#f4efdf" font-size="28" font-weight="600">Windows 客户端</text>
+      <text x="464" y="247" fill="#b6c2be" font-size="21">程序 + 地图、图像、音效</text>
+    </g>
+    <path d="M763 222H808M798 212L808 222L798 232" stroke="#cda766" stroke-width="2" fill="none"/>
+    <g id="docker-server">
+      <rect x="826" y="171" width="320" height="102" rx="8" fill="#22292c"/>
+      <text x="850" y="211" fill="#f4efdf" font-size="28" font-weight="600">Docker 服务端</text>
+      <text x="850" y="247" fill="#b6c2be" font-size="21">六服务 · 独立世界数据</text>
+    </g>
+    <text x="54" y="314" fill="#9caaa8" font-size="18">源码、程序与资源各有入口，配套文件通过 SHA256 校验。</text>
+  </g>
+</svg>

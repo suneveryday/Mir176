@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "project": "Mir2Classic176",
+  "version": "0.1.9",
+  "provides": {
+    "mir2-legacy-wire": "v1",
+    "mir2-gm-api": "v1",
+    "mir2-command-receipt": "v1",
+    "mir2-scroll-retain": "v1",
+    "mir2-map-navigation": "v1",
+    "classic-gm-profile": "v1"
+  },
+  "requires": {},
+  "release_evidence": {
+    "status": "pending_runtime_validation",
+    "note": "Current distribution is a reconstruction preview. Full server, PC, GM and bot runtime validation is pending."
+  }
+}
